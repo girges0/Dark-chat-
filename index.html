@@ -4,13 +4,12 @@
 <meta charset="UTF-8">
 <title>Dark Chat</title>
 <style>
-body{
+html, body{
   margin:0;
+  padding:0;
   font-family:Arial,sans-serif;
   background:#e5ddd5;
-  height:100vh;
-  display:flex;
-  flex-direction:column;
+  height:100%;
 }
 
 /* Login */
@@ -43,10 +42,12 @@ body{
 /* Chat Page */
 #chatPage{
   display:none;
-  flex:1;
+  height:100vh;
+  display:flex;
   flex-direction:column;
 }
 
+/* Header */
 #onlineList{
   height:56px;
   line-height:56px;
@@ -57,6 +58,7 @@ body{
   font-weight:bold;
 }
 
+/* Chat area */
 #chat{
   flex:1;
   overflow-y:auto;
@@ -65,6 +67,7 @@ body{
   flex-direction:column;
 }
 
+/* Messages */
 .msg{
   max-width:75%;
   padding:8px 12px;
@@ -143,10 +146,15 @@ body{
 img{max-width:70%;border-radius:10px;}
 
 /* Responsive */
-@media screen and (max-width:400px){
+@media screen and (max-width:600px){
   #msg{font-size:15px;}
   .msg{font-size:14px; padding:6px 10px;}
   #sendBtn{font-size:14px; padding:8px 14px;}
+}
+@media screen and (min-width:1200px){
+  #msg{font-size:16px;}
+  .msg{font-size:16px; padding:10px 14px;}
+  #sendBtn{font-size:16px; padding:10px 16px;}
 }
 </style>
 </head>
